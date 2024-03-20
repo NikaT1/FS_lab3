@@ -4,12 +4,12 @@ module clk_div(
     output clk2
 );
 
-reg [20:0]cnt = 0;
+reg [9:0]cnt = 0;
 
-assign clk2 = cnt[20];
+assign clk2 = cnt[9];
 
 always @(posedge clk) begin
-    cnt <= cnt + 21'b1;
+    cnt <= cnt + 10'b1;
 end
 
 endmodule
